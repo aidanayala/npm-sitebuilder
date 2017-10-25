@@ -9,20 +9,16 @@
     <meta name="keywords" content="">
     <meta name="author" content="{{ site_name }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="assets/css/style.css">
+
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-<div class="container-fluid bg-1 text-center">
-    <h1>Welcome to, {{ site_name }}...</h1>
-    {% include "partials/header.nunjucks" %}
-</div>
+{% include "partials/navigation.nunjucks" %}
 
 {% block content %}{% endblock %}
 
+<script src="js/main.js"></script>
 <script src="https://traki.traki.co.uk/track/{{ traki_code }}"></script>
 </body>
 </html>

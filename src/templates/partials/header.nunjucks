@@ -1,0 +1,4 @@
+<!-- header.nunjucks -->
+<h3>{{ components.header.title }}</h3>
+<img class="img-circle" src="{{ components.header.img.src }}" title="{{ components.header.img.title }}" alt="{{ components.header.img.alt }}">
+<p>{{ components.header.content }}</p>

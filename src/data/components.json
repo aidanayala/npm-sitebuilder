@@ -1,0 +1,28 @@
+{
+  "components": {
+    "header": {
+      "title": "Who Am I?",
+      "img": {
+        "src": "https://source.unsplash.com/random/250x250",
+        "title": "Me",
+        "alt": "me"
+      },
+      "content": "I'm an adventurer"
+    },
+    "home": [
+      {
+        "id": "whatAmI",
+        "class": "container-fluid bg-2 text-center",
+        "title": "What am I?",
+        "content": "Loren ipsum..."
+      },
+      {
+        "id": "whereToFind",
+        "class": "container-fluid bg-3 text-center",
+        "title": "Where to find me?",
+        "content": "Loren ipsum...",
+        "partials": ["contact-mini"]
+      }
+    ]
+  }
+}

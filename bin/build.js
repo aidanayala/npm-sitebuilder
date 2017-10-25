@@ -15,6 +15,7 @@ const jsonFile = require('jsonfile');
 const shell = require('shelljs');
 const replace = require('replace-in-file');
 const htmlmin = require('gulp-htmlmin');
+const sass = require('gulp-sass');
 
 // TODO: Refactor this. Probably a better way than string replacing, perhaps pass data per file load?
 var pages = jsonFile.readFileSync('./src/data/pages.json').pages;
@@ -71,6 +72,9 @@ gulp.src('src/pages/**/*.+(html|nunjucks)')
     .pipe(data(function () {
         return require('../src/data/pages.json')
     }))
+    .pipe(data(function () {
+        return require('../src/data/components.json')
+    }))
     .pipe(nunjucks({
         path: ['src/templates']
     }))
@@ -80,6 +84,14 @@ gulp.src('src/pages/**/*.+(html|nunjucks)')
  * Minify HTML
  * TODO: ^^
  */
+
+/**
+ * Build SASS
+ */
+gulp.src('./src/assets/css/**/*.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulp.dest('dist/assets/css'));
+
 
 /**
  * Build Complete

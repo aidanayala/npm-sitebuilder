@@ -1,0 +1,4 @@
+<!-- contact-mini.nunjucks -->
+<h4>Contact me</h4>
+<a id="contactEmail" class="contact-email" href="mailto:{{ contact_email }}">{{ contact_email }}</a><br>
+<a id="contactNumber" class="contact-number" href="tel:{{ contact_number }}">{{ contact_number }}</a>

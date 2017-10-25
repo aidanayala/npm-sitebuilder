@@ -5,5 +5,16 @@
 {% extends "layout.nunjucks" %}
 
 {% block content %}
-    <h1>{{ pages.home.content.main_block }}</h1>
+    {% for item in components.home %}
+        {{ name }}
+        <div id="{{ item.id }}" class="{{ item.class }}">
+            <h3>{{ item.title }}</h3>
+            <p>{{ item.content }}</p>
+            {% if item.partials != null %}
+                {% for partial in item.partials %}
+                    {% include "partials/" + partial + ".nunjucks" %}
+                {% endfor %}
+            {% endif %}
+        </div>
+    {% endfor %}
 {% endblock %}

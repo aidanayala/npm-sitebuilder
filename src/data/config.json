@@ -1,6 +1,8 @@
 {
-  "site_name": "My cool site",
-  "admin_email": "aidanayala.web@gmail.com",
+  "site_name": "Bigg",
+  "admin_email": "aidan@bigg.co.uk",
+  "contact_email": "aidan@bigg.co.uk",
+  "contact_number": "01234567890",
   "traki_code": "123",
   "ga_code": "GA123"
 }
