@@ -22,3 +22,5 @@ Follow similar convention for other pages.
 4. run "npm-sitebuilder-build"
 
 5. View created website in /dist folder
+
+6. Install Surge ("npm install --global surge") to deploy the site after building. MAKE SURE YOU ONLY PUBLISH THE /dist folder!
