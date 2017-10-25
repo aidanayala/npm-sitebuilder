@@ -1,0 +1,24 @@
+{
+  "name": "npm-sitebuilder",
+  "version": "0.0.1",
+  "description": "A CLI site builder with gulp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-data": "^1.2.1",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-nunjucks-render": "^2.2.1",
+    "jsonfile": "^4.0.0",
+    "parse-json": "^3.0.0",
+    "replace-in-file": "^3.0.0-beta.2",
+    "shelljs": "^0.7.8"
+  },
+  "bin": {
+    "npm-sitebuilder-build": "bin/build.js"
+  }
+}

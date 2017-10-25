@@ -1,0 +1,8 @@
+<!-- navigation.nunjucks -->
+<nav>
+    {% for name, item in pages %}
+        {% if item.in_nav %}
+            <a href="{{ item.url }}">{{ item.name }}</a>
+        {% endif %}
+    {% endfor %}
+</nav>

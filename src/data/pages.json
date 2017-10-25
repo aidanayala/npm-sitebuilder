@@ -1,0 +1,52 @@
+{
+  "pages": {
+    "home": {
+      "name": "Home",
+      "url": "/",
+      "in_nav": true,
+      "meta_title": "Home",
+      "meta_description": "A meta description for the home page",
+      "is_root": true,
+      "template": "default",
+      "content": {
+        "main_block": "Hey, I'm the home page!"
+      }
+    },
+    "about": {
+      "name": "About",
+      "url": "/about",
+      "in_nav": true,
+      "meta_title": "About Us",
+      "meta_description": "A meta description for the about us page",
+      "is_root": false,
+      "template": "default",
+      "content": {
+        "main_block": "Hey, I'm the about page!"
+      }
+    },
+    "contact": {
+      "name": "Contact",
+      "url": "/contact",
+      "in_nav": true,
+      "meta_title": "Get in touch",
+      "meta_description": "A meta description for the contact page",
+      "is_root": false,
+      "template": "contact",
+      "content": {
+        "main_block": "Hey, I'm the contact page!"
+      }
+    },
+    "faq": {
+      "name": "FAQ",
+      "url": "/faq",
+      "in_nav": false,
+      "meta_title": "Popular Things People Ask",
+      "meta_description": "A meta description for the faq page",
+      "is_root": false,
+      "template": "default",
+      "content": {
+        "main_block": "Hey, I'm the FAQ page!"
+      }
+    }
+  }
+}
