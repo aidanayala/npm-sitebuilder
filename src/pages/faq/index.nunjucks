@@ -1,9 +1,9 @@
 <!-- index.nunjucks -->
-{% set meta_title = pages.faq.meta_title %}
-{% set meta_description = pages.faq.meta_description %}
+{% set meta_title = pages._page_name_.meta_title %}
+{% set meta_description = pages._page_name_.meta_description %}
 
 {% extends "layout.nunjucks" %}
 
 {% block content %}
-    <h1>{{ pages.faq.content.main_block }}</h1>
+    <h1>{{ pages._page_name_.content.main_block }}</h1>
 {% endblock %}

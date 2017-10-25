@@ -1,10 +1,10 @@
 <!-- index.nunjucks -->
-{% set meta_title = pages.contact.meta_title %}
-{% set meta_description = pages.contact.meta_description %}
+{% set meta_title = pages._page_name_.meta_title %}
+{% set meta_description = pages._page_name_.meta_description %}
 
 {% extends "layout.nunjucks" %}
 
 {% block content %}
-    <h1>{{ pages.contact.content.main_block }}</h1>
+    <h1>{{ pages._page_name_.content.main_block }}</h1>
     <p>Contact me on <a href="mailto:{{ admin_email }}">{{ admin_email }}</a></p>
 {% endblock %}

@@ -86,4 +86,4 @@ gulp.src('src/pages/**/*.+(html|nunjucks)')
  */
 console.log('# Build Complete #');
 
-shell.exec('surge');
+//shell.exec('surge');
