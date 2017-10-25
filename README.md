@@ -19,7 +19,7 @@ Follow similar convention for other pages.
 
 3. run "npm install -g"
 
-4. run "npm-sitebuilder-build"
+4. run "npm-sitebuilder-configure" to configure & build the site OR "npm-sitebuilder-build" to just build the site.
 
 5. View created website in /dist folder
 
