@@ -3,7 +3,6 @@
 /**
  * TODO: Todos ...
  * 1. Figure out a way of not having the pages folder generated in the src/ folder. Move them to a temp directory for example then clean up
- * Add SASS, JS & Minification & Uglyfying
  */
 console.log("# Building Site #");
 
@@ -14,7 +13,6 @@ const data = require('gulp-data');
 const jsonFile = require('jsonfile');
 const shell = require('shelljs');
 const replace = require('replace-in-file');
-const htmlmin = require('gulp-htmlmin');
 const sass = require('gulp-sass');
 
 // TODO: Refactor this. Probably a better way than string replacing, perhaps pass data per file load?
@@ -61,41 +59,59 @@ function generatePages(pages) {
  */
 console.log("# Executing build #");
 
-// clean up dist folder
+/**
+ * Clean remove old dist folder
+ */
 shell.exec('rm -rf dist');
 
-// build site
-gulp.src('src/pages/**/*.+(html|nunjucks)')
-    .pipe(data(function () {
-        return require('../src/data/config.json')
-    }))
-    .pipe(data(function () {
-        return require('../src/data/pages.json')
-    }))
-    .pipe(data(function () {
-        return require('../src/data/components.json')
-    }))
-    .pipe(nunjucks({
-        path: ['src/templates']
-    }))
-    .pipe(gulp.dest('dist/'));
-
 /**
- * Minify HTML
- * TODO: ^^
+ * Build site
  */
+gulp.task('build-html', function () {
+    console.log("# Building HTML... #");
+    return gulp.src('src/pages/**/*.+(html|nunjucks)')
+        .pipe(data(function () {
+            return require('../src/data/config.json')
+        }))
+        .pipe(data(function () {
+            return require('../src/data/pages.json')
+        }))
+        .pipe(data(function () {
+            return require('../src/data/components.json')
+        }))
+        .pipe(nunjucks({
+            path: ['src/templates']
+        }))
+        .pipe(gulp.dest('./dist/'));
+});
+
+gulp.task('move-images', function () {
+    console.log("# Moving Images... #");
+    return gulp.src('./src/assets/img/*')
+        .pipe(gulp.dest('./dist/assets/img'));
+});
 
 /**
  * Build SASS
  */
-gulp.src('./src/assets/css/**/*.scss')
-    .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('dist/assets/css'));
-
+gulp.task('build-sass', function () {
+    console.log("# Building SASS... #");
+    return gulp.src('./src/assets/css/**/*.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(gulp.dest('./dist/assets/css'));
+});
 
 /**
- * Build Complete
+ * Main Task runner
  */
-console.log('# Build Complete #');
+gulp.task('build', ['build-html', 'move-images', 'build-sass'], function () {
+    console.log('# Build Complete #');
 
-//shell.exec('surge');
+    // run minify
+    shell.exec('npm-sitebuilder-minify');
+});
+
+/**
+ * Run build task
+ */
+gulp.start('build');

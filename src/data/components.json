@@ -3,7 +3,7 @@
     "header": {
       "title": "Who Am I?",
       "img": {
-        "src": "https://source.unsplash.com/random/250x250",
+        "src": "assets/img/profile.jpeg",
         "title": "Me",
         "alt": "me"
       },
