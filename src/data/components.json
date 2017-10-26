@@ -1,0 +1,50 @@
+{
+  "components": {
+    "header": {
+      "title": "Who Am I?",
+      "img": {
+        "src": "assets/img/profile.jpeg",
+        "title": "Me",
+        "alt": "me"
+      },
+      "content": "I'm an adventurer"
+    },
+    "home": [
+      {
+        "id": "whatAmI",
+        "class": "container-fluid bg-2 text-center",
+        "title": "What am I?",
+        "content": "Loren ipsum..."
+      },
+      {
+        "id": "whereToFind",
+        "class": "container-fluid bg-3 text-center",
+        "title": "Where to find me?",
+        "content": "Loren ipsum...",
+        "partials": ["contact-mini"]
+      }
+    ],
+    "posts": [
+      {
+        "id": "1",
+        "name": "Post Number One",
+        "content": "Post Number One Content"
+      },
+      {
+        "id": "2",
+        "name": "Post Number Two",
+        "content": "Post Number Two Content"
+      },
+      {
+        "id": "3",
+        "name": "Post Number Three",
+        "content": "Post Number Three Content"
+      },
+      {
+        "id": "4",
+        "name": "Post Number Four",
+        "content": "Post Number Four Content"
+      }
+    ]
+  }
+}

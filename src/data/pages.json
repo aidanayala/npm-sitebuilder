@@ -1,0 +1,13 @@
+{
+  "pages": {
+    "home": {
+      "name": "Home",
+      "url": "/",
+      "in_nav": true,
+      "meta_title": "Home",
+      "meta_description": "A meta description for the home page",
+      "is_root": true,
+      "template": "default"
+    }
+  }
+}
