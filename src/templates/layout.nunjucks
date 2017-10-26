@@ -23,6 +23,10 @@
 
 {% block content %}{% endblock %}
 
+<div class="container-fluid bg-3 text-center">
+    <h3 style="color:red;">View my source to see how small I am!</h3>
+</div>
+
 <script src="https://traki.traki.co.uk/track/{{ traki_code }}"></script>
 </body>
 </html>
